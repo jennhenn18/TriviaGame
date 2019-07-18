@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trivia Game</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Neucha&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="game">
+        
+        <header><h1>All about the 90's Trivia!</h1></header>
+
+        <button id="start">Start!</button>
+        
+        <section id="counter">
+            <h2>Time Remaining</h2>
+            <p id="clock"></p>
+        
+        </section>
+
+        <form id="myForm">
+            <div class="question" id="question-1">
+                <h3>Which album sold more records: Alanis Morissette's "Jagged Little Pill" or Spice Girls "Spice"?</h3>
+                <input type="radio" name="album" value="pill"/> Jagged Little Pill
+                <input type="radio" name="album" value="spice"/> Spice
+            </div>
+            <div class="question" id="question-2">
+                    <h3>Which move won the 1998 Oscar for Best Original Screenplay?</h3>
+                    <input type="radio" name="oscar" value="titanic"/> Titanic
+                    <input type="radio" name="oscar" value="hunting"/> Good Will Hunting
+            </div>
+            <div class="question" id="question-3">
+                    <h3>Which film was the first-ever animated movie to be nominated for an Academy Award for Best Picture?</h3>
+                    <input type="radio" name="movie" value="beast"/> Beauty and the Beast
+                    <input type="radio" name="movie" value="king"/> The Lion King
+            </div>
+            <div class="question" id="question-4">
+                    <h3>Which band formed first: NSYNC or the Backstreet Boys?</h3>
+                    <input type="radio" name="band" value="nsync"/> NSYNC
+                    <input type="radio" name="band" value="bboys"/> Backstreet Boys
+            </div>
+            <div class="question" id="question-5">
+                    <h3>Who sang the "Friends" theme song?</h3>
+                    <input type="radio" name="song" value="rembrandts"/> The Rembrandts
+                    <input type="radio" name="song" value="blossoms"/> Gin Blossoms
+            </div>
+            <div class="question" id="question-6">
+                    <h3>The 1996 Summer Olympics were held in which U.S. city?</h3>
+                    <input type="radio" name="olympics" value="atlanta"/> Atlanta
+                    <input type="radio" name="olympics" value="dallas"/> Dallas
+            </div>
+            <div class="question" id="question-7">
+                    <h3>The movie "10 Things I Hate About You" was based on which Shakespeare play?</h3>
+                    <input type="radio" name="play" value="ado"/> Much Ado About Nothing
+                    <input type="radio" name="play" value="taming"/> The Taming of the Shrew
+            </div>
+            <div class="question" id="question-8">
+                    <h3>What is the name of the high school in “Boy Meets World”?</h3>
+                    <input type="radio" name="show" value="ado"/> John Adams High School
+                    <input type="radio" name="show" value="taming"/> Libert High School
+            </div>
+        </form>
+
+        <button id="done">Done</button>
+
+    <!-- JQuery/JavaScript Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./assets/javascript/app.js"></script>
+    </div>
+</body>
+</html>
