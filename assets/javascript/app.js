@@ -4,10 +4,12 @@ var correctAnswers = 0;
 var incorrectAnswers = 0;
 var timer = 100; 
 var intervalId;
+var answerArray = ["pill", "hunting", "beast", "nsync", "rebrandts", "atlanta", "taming", "adams"]
+var userAnswer = [];
 
 
 
-//link HTML buttons to functions and runs upon page load
+/////////////////// EVENT LISTENERS //////////////////
 $("#start").on("click", start);
 $("#done").on("click", done);
 
@@ -115,8 +117,9 @@ $("#done").on("click", done);
             //add one to correct answers
             correctAnswers++;
             
-            } else if (answerArray[i] === null) {
-                //if an answer is null alert the user
+             //if an answer is null alert the user
+            } else if (answerArray[i] === '') {
+               
                 alert("Oops! You left a question blank. Please go back and complete all questions.")
             } else {
                 // else add one to incorrect answers
