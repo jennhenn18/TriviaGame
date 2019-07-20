@@ -34,7 +34,7 @@
                 <input type="radio" name="album" value="spice"/> Spice
             </div>
             <div class="question" id="question-2">
-                    <h3>Which move won the 1998 Oscar for Best Original Screenplay?</h3>
+                    <h3>Which movie won the 1998 Oscar for Best Original Screenplay?</h3>
                     <input type="radio" name="oscar" value="titanic"/> Titanic
                     <input type="radio" name="oscar" value="hunting"/> Good Will Hunting
             </div>
@@ -65,12 +65,20 @@
             </div>
             <div class="question" id="question-8">
                     <h3>What is the name of the high school in “Boy Meets World”?</h3>
-                    <input type="radio" name="show" value="ado"/> John Adams High School
-                    <input type="radio" name="show" value="taming"/> Libert High School
+                    <input type="radio" name="show" value="adams"/> John Adams High School
+                    <input type="radio" name="show" value="liberty"/> Liberty High School
             </div>
+            <button id="done">Done</button>
         </form>
 
-        <button id="done">Done</button>
+        
+
+        <div id="score">
+                <h2>Nice work! How did you do?</h2>
+                <p>Correct answers: <div id="correct-count"></div></p>
+                <p>Incorrect answers: <div id="incorrect-count"></div></p>
+                <button id="restart">Try again</button>
+        </div>
 
     <!-- JQuery/JavaScript Files -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

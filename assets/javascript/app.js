@@ -8,36 +8,26 @@ var intervalId;
 
 
 //link HTML buttons to functions and runs upon page load
-window.onload = function() {
-    $("#start").on("click", start);
-    $("#done").on("click", done);
+$("#start").on("click", start);
+$("#done").on("click", done);
 
-    // //hide questions
-    // $("#myForm").hide();
+// window.onload = function() {
+  
 
-    // //hide timer
-    // $("#counter").hide();
+//     // //hide questions
+//     // $("#myForm").hide();
 
-    // //hide done button
-    // $("#done").hide();
-};
+//     // //hide timer
+//     // $("#counter").hide();
+
+//     // //hide done button
+//     // $("#done").hide();
+// };
 
 //ON PAGE LOAD
 //hide time remaining
 //hide questions
 //hide done button
-
-///////////// OBJECTS
-
-var answer1 = {
-    correct: "pill",
-    incorrect: "spice"
-};
-
-var answer2 = {
-    correct: "titanic",
-    incorrect: "hunting"
-};
 
 ////////////////// START FUNCTION ////////////////
 
@@ -83,37 +73,58 @@ var answer2 = {
 
 ////////////////// START DONE FUNCTION ///////////////
 
-    function done() {
+    function done(arr) {
 
-        //// CHECK QUESTION 1 ////
-            //find answer selected for question
-            var input1 = $("#question-1 [name=album]:checked").val();
-            console.log(input1);
+        // store user inputs
+        var input1 = $("#question-1 [name=album]:checked").val();
+        var input2 = $("#question-2 [name=oscar]:checked").val();
+        var input3 = $("#question-3 [name=movie]:checked").val();
+        var input4 = $("#question-4 [name=band]:checked").val();
+        var input5 = $("#question-5 [name=song]:checked").val();
+        var input6 = $("#question-6 [name=olympics]:checked").val();
+        var input7 = $("#question-7 [name=play]:checked").val();
+        var input8 = $("#question-8 [name=show]:checked").val();
 
-            //conditional to check answer
-            if (input1 === answer1.correct) {
-                correctAnswers++;
+        console.log("Input 1: " + input1);
+        console.log("Input 2: " + input2);
+        console.log("Input 3: " + input3);
+        console.log("Input 4: " + input4);
+        console.log("Input 5: " + input5);
+        console.log("Input 6: " + input6);
+        console.log("Input 7: " + input7);
+        console.log("Input 8: " + input8);
+
+
+        // push inputs into userAnswer array
+        userAnswer.push(input1)
+        userAnswer.push(input2)
+        userAnswer.push(input3)
+        userAnswer.push(input4)
+        userAnswer.push(input5)
+        userAnswer.push(input6)
+        userAnswer.push(input7)
+        userAnswer.push(input8)
+
+        console.log("User answers: " + userAnswer);
+
+    // loop through answer array
+    for (i =0; i < answerArray.length; i++) {
+        
+        // compare answer array against user answer array
+        if (answerArray[i] === userAnswer[i]) {
+            //add one to correct answers
+            correctAnswers++;
+            
+            } else if (answerArray[i] === null) {
+                //if an answer is null alert the user
+                alert("Oops! You left a question blank. Please go back and complete all questions.")
             } else {
+                // else add one to incorrect answers
                 incorrectAnswers++;
-                console.log(correctAnswers);
-                console.log(incorrectAnswers);
+                
             }
-
-        //// CHECK QUESTION 2 ////
-            //find answer selected for question
-
-            var input2 = $("#question-2 [name=oscar]:checked").val();
-            console.log(input2);
-
-            //conditional to check answer
-            if (input2 === answer2.correct) {
-                correctAnswers++;
-            } else {
-                incorrectAnswers++;
-                // console.log(correctAnswers);
-                // console.log(incorrectAnswers);
-            }
-
+    } console.log("Correct answers: " + correctAnswers);
+    console.log("Incorrect answers: " + incorrectAnswers);
 
 
 
