@@ -8,41 +8,49 @@ var answerArray = ["pill", "hunting", "beast", "nsync", "rebrandts", "atlanta", 
 var userAnswer = [];
 
 
+function pageLoad() {
+    //hide questions
+    $("#myForm").hide();
+
+    //hide timer
+    $("#counter").hide();
+
+    //hide done button
+    $("#done").hide();
+
+    //hide scorecard
+    $("#score").hide();
+
+    //display start button
+    $("#start").show();
+
+    //empty userAnswer array
+    emptyUserArray();
+}
+
+pageLoad(window.onload);
+
+/////////// EMPTY USER ANSWER ARRAY ///////
+function emptyUserArray() {
+    userAnswer = [];
+}
 
 /////////////////// EVENT LISTENERS //////////////////
 $("#start").on("click", start);
 $("#done").on("click", done);
-$("#restart").on("click", restart);
 
-window.onload = function() {
-        //hide questions
-        $("#myForm").hide();
 
-        //hide timer
-        $("#counter").hide();
-
-        //hide done button
-        $("#done").hide();
-
-        //hide scorecard
-        $("#score").hide();
-};
-
-//ON PAGE LOAD
-//hide time remaining
-//hide questions
-//hide done button
 
 ////////////////// START FUNCTION ////////////////
 
     function start() {
 
-        //reset variables
+         //reset variables
         correctAnswers = 0;
         incorrectAnswers = 0;
         timer = 100; 
         intervalId;
-
+        
         //display timer
         $("#counter").show();
         
@@ -159,13 +167,6 @@ window.onload = function() {
 
     }
 
-//ONCLICK DONE
-//hide questions
-//return incorrect answers
-//return correct answers
-//return unanswered
-//display "try again button"
 
-//ONCLICK TRY AGAIN
-//return to page load
-//reset all variables
+/////////// RESTART GAME ///////////////
+$("#restart").on("click", pageLoad);
