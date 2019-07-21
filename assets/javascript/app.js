@@ -12,6 +12,7 @@ var userAnswer = [];
 /////////////////// EVENT LISTENERS //////////////////
 $("#start").on("click", start);
 $("#done").on("click", done);
+$("#restart").on("click", restart);
 
 // window.onload = function() {
   
@@ -129,7 +130,28 @@ $("#done").on("click", done);
     } console.log("Correct answers: " + correctAnswers);
     console.log("Incorrect answers: " + incorrectAnswers);
 
+    //hide start button
+    $("#start").hide();
 
+    //hide timer
+    $("#counter").hide();
+
+    //hide form
+    $("#myForm").hide();
+
+    //hide done button
+    $("#done").hide();
+
+    // display score and restart button
+    $("#score").show();
+
+    // display correct answers
+    $("#correct-count").html(correctAnswers);
+    console.log(correctAnswers);
+
+    // display incorrect answers
+    $("#incorrect-count").html(incorrectAnswers);
+    console.log(incorrectAnswers);
 
     }
 
