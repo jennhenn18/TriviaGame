@@ -14,18 +14,19 @@ $("#start").on("click", start);
 $("#done").on("click", done);
 $("#restart").on("click", restart);
 
-// window.onload = function() {
-  
+window.onload = function() {
+        //hide questions
+        $("#myForm").hide();
 
-//     // //hide questions
-//     // $("#myForm").hide();
+        //hide timer
+        $("#counter").hide();
 
-//     // //hide timer
-//     // $("#counter").hide();
+        //hide done button
+        $("#done").hide();
 
-//     // //hide done button
-//     // $("#done").hide();
-// };
+        //hide scorecard
+        $("#score").hide();
+};
 
 //ON PAGE LOAD
 //hide time remaining
@@ -42,14 +43,17 @@ $("#restart").on("click", restart);
         timer = 100; 
         intervalId;
 
-        // //display questions
-        // $("#myForm").show();
+        //display timer
+        $("#counter").show();
         
-        // // //display timer
-        // $("#counter").show();
+        //display questions
+        $("#myForm").show();
+        
+        //display done button
+        $("#done").show();
 
-        // //hide start button
-        // $("#start").hide();
+        //hide start button
+        $("#start").hide();
 
         //start timer
         intervalId = setInterval(decrement, 1000);
