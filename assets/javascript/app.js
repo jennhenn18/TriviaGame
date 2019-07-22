@@ -23,22 +23,14 @@ function pageLoad() {
 
     //display start button
     $("#start").show();
-
-    //empty userAnswer array
-    emptyUserArray();
 }
 
 pageLoad(window.onload);
 
-/////////// EMPTY USER ANSWER ARRAY ///////
-function emptyUserArray() {
-    userAnswer = [];
-}
 
 /////////////////// EVENT LISTENERS //////////////////
 $("#start").on("click", start);
 $("#done").on("click", done);
-
 
 
 ////////////////// START FUNCTION ////////////////
@@ -50,6 +42,8 @@ $("#done").on("click", done);
         incorrectAnswers = 0;
         timer = 100; 
         intervalId;
+        userAnswer = [];
+        $("#myForm").trigger("reset");
         
         //display timer
         $("#counter").show();
@@ -169,4 +163,8 @@ $("#done").on("click", done);
 
 
 /////////// RESTART GAME ///////////////
+
+//go back to start page
 $("#restart").on("click", pageLoad);
+
+    

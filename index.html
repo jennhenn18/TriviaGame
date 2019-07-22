@@ -11,72 +11,91 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css?family=Neucha&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque|Orbitron&display=swap" rel="stylesheet">
 
 </head>
 <body>
     <div id="game">
+        <div id="header">
+           <h1>All about the 90's Trivia!</h1>
+           <button id="start">Start!</button>
+        </div>
         
-        <header><h1>All about the 90's Trivia!</h1></header>
+        <section id="myForm">
+                <section id="counter">
+                      <h2>Time Remaining:</h2>
+                      <p id="clock"></p>
 
-        <button id="start">Start!</button>
+                </section>
+                
         
-        <section id="counter">
-            <h2>Time Remaining</h2>
-            <p id="clock"></p>
-        
+           <form>
+                <div class="question" id="question-1">
+                        <h3>Which album sold more records: Alanis Morissette's "Jagged Little Pill" or Spice Girls "Spice"?</h3>
+                        <input type="radio" name="album" value="pill" id="album-pill">
+                                <label for="album-pill">Jagged Little Pill</label> 
+                        <input type="radio" name="album" value="spice" id="album-spice">
+                                <label for="album-spice">Spice Girls</label>
+                </div>
+                <div class="question" id="question-2">
+                        <h3>Which movie won the 1998 Oscar for Best Original Screenplay?</h3>
+                        <input type="radio" name="oscar" value="titanic" id="oscar-titanic">
+                                <label for="oscar-titanic">Titanic</label> 
+                        <input type="radio" name="oscar" value="hunting" id="oscar-hunting"> 
+                                <label for="oscar-hunting">Good Will Hunting</label> 
+                </div>
+                <div class="question" id="question-3">
+                        <h3>Which film was the first-ever animated movie to be nominated for an Academy Award for Best Picture?</h3>
+                        <input type="radio" name="movie" value="beast" id="movie-beast"> 
+                                <label for="movie-beast">Beauty and the Beast</label> 
+                        <input type="radio" name="movie" value="king" id="movie-king"> 
+                                <label for="movie-king">The Lion King</label> 
+                </div>
+                <div class="question" id="question-4">
+                        <h3>Which band formed first: NSYNC or the Backstreet Boys?</h3>
+                        <input type="radio" name="band" value="nsync" id="band-nsync"> 
+                                <label for="band-nsync">NSYNC</label> 
+                        <input type="radio" name="band" value="bboys" id="band-bboys">
+                                <label for="band-bboys">Backstreet Boys</label> 
+                </div>
+                <div class="question" id="question-5">
+                        <h3>Who sang the "Friends" theme song?</h3>
+                        <input type="radio" name="song" value="rembrandts" id="song-rembrandts"> 
+                                <label for="song-rembrandts">The Rembrandts</label> 
+                        <input type="radio" name="song" value="blossoms" id="song-blossoms">
+                                <label for="song-blossoms"> Gin Blossoms</label> 
+                </div>
+                <div class="question" id="question-6">
+                        <h3>The 1996 Summer Olympics were held in which U.S. city?</h3>
+                        <input type="radio" name="olympics" value="atlanta" id="olympics-atlanta">
+                                <label for="olympics-atlanta">Atlanta</label> 
+                        <input type="radio" name="olympics" value="dallas" id="olympics-dallas"> 
+                                <label for="olympics-dallas">Dallas</label> 
+                </div>
+                <div class="question" id="question-7">
+                        <h3>The movie "10 Things I Hate About You" was based on which Shakespeare play?</h3>
+                        <input type="radio" name="play" value="ado" id="play-ado"> 
+                                <label for="play-ado">Much Ado About Nothing</label> 
+                        <input type="radio" name="play" value="taming" id="play-taming"> 
+                                <label for="play-taming">The Taming of the Shrew</label> 
+                </div>
+                <div class="question" id="question-8">
+                        <h3>What is the name of the high school in “Boy Meets World”?</h3>
+                        <input type="radio" name="show" value="adams" id="show-adams"> 
+                                <label for="show-adams">John Adams High School</label> 
+                        <input type="radio" name="show" value="liberty" id="show-liberty"> 
+                                <label for="show-liberty">Liberty High School</label>
+                </div>
+                </form>
+
+                <button id="done">Done</button>
         </section>
-
-        <form id="myForm">
-            <div class="question" id="question-1">
-                <h3>Which album sold more records: Alanis Morissette's "Jagged Little Pill" or Spice Girls "Spice"?</h3>
-                <input type="radio" name="album" value="pill"/> Jagged Little Pill
-                <input type="radio" name="album" value="spice"/> Spice
-            </div>
-            <div class="question" id="question-2">
-                    <h3>Which movie won the 1998 Oscar for Best Original Screenplay?</h3>
-                    <input type="radio" name="oscar" value="titanic"/> Titanic
-                    <input type="radio" name="oscar" value="hunting"/> Good Will Hunting
-            </div>
-            <div class="question" id="question-3">
-                    <h3>Which film was the first-ever animated movie to be nominated for an Academy Award for Best Picture?</h3>
-                    <input type="radio" name="movie" value="beast"/> Beauty and the Beast
-                    <input type="radio" name="movie" value="king"/> The Lion King
-            </div>
-            <div class="question" id="question-4">
-                    <h3>Which band formed first: NSYNC or the Backstreet Boys?</h3>
-                    <input type="radio" name="band" value="nsync"/> NSYNC
-                    <input type="radio" name="band" value="bboys"/> Backstreet Boys
-            </div>
-            <div class="question" id="question-5">
-                    <h3>Who sang the "Friends" theme song?</h3>
-                    <input type="radio" name="song" value="rembrandts"/> The Rembrandts
-                    <input type="radio" name="song" value="blossoms"/> Gin Blossoms
-            </div>
-            <div class="question" id="question-6">
-                    <h3>The 1996 Summer Olympics were held in which U.S. city?</h3>
-                    <input type="radio" name="olympics" value="atlanta"/> Atlanta
-                    <input type="radio" name="olympics" value="dallas"/> Dallas
-            </div>
-            <div class="question" id="question-7">
-                    <h3>The movie "10 Things I Hate About You" was based on which Shakespeare play?</h3>
-                    <input type="radio" name="play" value="ado"/> Much Ado About Nothing
-                    <input type="radio" name="play" value="taming"/> The Taming of the Shrew
-            </div>
-            <div class="question" id="question-8">
-                    <h3>What is the name of the high school in “Boy Meets World”?</h3>
-                    <input type="radio" name="show" value="adams"/> John Adams High School
-                    <input type="radio" name="show" value="liberty"/> Liberty High School
-            </div>
-            
-        </form>
-        <button id="done">Done</button>
         
 
         <div id="score">
-                <h2>Nice work! How did you do?</h2>
-                <p>Correct answers: <div id="correct-count"></div></p>
-                <p>Incorrect answers: <div id="incorrect-count"></div></p>
+                <h4>Nice work! How did you do?</h4>
+                <p>Correct answers: <div class="answercount" id="correct-count"></div></p>
+                <p>Incorrect answers: <div class="answercount"  id="incorrect-count"></div></p>
                 <button id="restart">Try again</button>
         </div>
 
