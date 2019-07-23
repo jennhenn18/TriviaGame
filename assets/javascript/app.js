@@ -7,7 +7,6 @@ var intervalId;
 var answerArray = ["pill", "hunting", "beast", "nsync", "rebrandts", "atlanta", "taming", "adams"]
 var userAnswer = [];
 
-
 function pageLoad() {
     //hide questions
     $("#myForm").hide();
@@ -41,8 +40,9 @@ $("#done").on("click", done);
         correctAnswers = 0;
         incorrectAnswers = 0;
         timer = 100; 
-        intervalId;
         userAnswer = [];
+        clearInterval(intervalId);
+
         $("#myForm").trigger("reset");
         
         //display timer
@@ -71,9 +71,10 @@ $("#done").on("click", done);
         $("#clock").html(timer + " seconds");
 
         // stop game when time runs out
-        if (timer === 0) {
-            stop();
+        if (timer <= 0) {
+            clearInterval(intervalId);
             alert("Time Up!");
+            pageLoad();
         }
     }
 
